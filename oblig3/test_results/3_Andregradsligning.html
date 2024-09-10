@@ -4,7 +4,7 @@
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Notebook</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
-  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.5.0/mermaid.esm.min.mjs';
+  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script>
 <style type="text/css">
@@ -13184,10 +13184,15 @@ Det eksisterer ingen reelle tall som er kvadratroten til et negativt tall. ABC-f
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">antall_losninger</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
-    <span class="c1">#-------------------------------------</span>
-    <span class="c1"># SKRIV DIN KODE HER!</span>
-    <span class="c1">#-------------------------------------</span>
-    
+    <span class="n">indicator</span> <span class="o">=</span> <span class="n">b</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">a</span> <span class="o">*</span> <span class="n">c</span>
+    <span class="k">if</span> <span class="n">indicator</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">2</span>
+    <span class="k">elif</span> <span class="n">indicator</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+
 <span class="c1"># Her er funksjonskall med utskrift for å sjekke de tre mulige utfallene:</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">antall_losninger</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">)</span><span class="w"> </span><span class="si">= }</span><span class="s2">"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">antall_losninger</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="si">= }</span><span class="s2">"</span><span class="p">)</span>
@@ -13200,12 +13205,10 @@ Det eksisterer ingen reelle tall som er kvadratroten til et negativt tall. ABC-f
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[1], line 7</span>
-<span class="ansi-red-fg">    print(f"{antall_losninger(2, 4, 9) = }")</span>
-    ^
-<span class="ansi-red-fg">IndentationError</span><span class="ansi-red-fg">:</span> expected an indented block after function definition on line 1
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>antall_losninger(2, 4, 9) = 0
+antall_losninger(2, -5, 0) = 2
+antall_losninger(2, 4, 2) = 1
 </pre>
 </div>
 </div>
@@ -13226,12 +13229,12 @@ Det eksisterer ingen reelle tall som er kvadratroten til et negativt tall. ABC-f
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_html rendered_html output_subarea"><div class="alert alert-danger">Could not run tests, name 'antall_losninger' is not defined</div></div>
+<div class="output_html rendered_html output_subarea"><div class="alert alert-success">All tests passed. </div></div>
 </div>
 <div class="output_area">
 <div class="prompt output_prompt">Out[2]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>0.0</pre>
+<pre>5.0</pre>
 </div>
 </div>
 </div>
@@ -13250,11 +13253,11 @@ Det eksisterer ingen reelle tall som er kvadratroten til et negativt tall. ABC-f
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><em><strong>Utvid nå funksjonen fra a) slik at et funksjonskall returnerer de reelle løsningene som en liste</strong></em></p>
 <p><strong>Eksempel på kjøring av kode:</strong></p>
-<div class="highlight"><pre><span></span><span class="c1">#Eksempel 1: ingen reelle løsninger</span>
+<div class="highlight"><pre><span></span><span class="c1"># Eksempel 1: ingen reelle løsninger</span>
 <span class="n">andregradsligning</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
 <span class="p">[]</span>
 </pre></div>
-<div class="highlight"><pre><span></span><span class="c1">#Eksempel 2: to reelle løsninger</span>
+<div class="highlight"><pre><span></span><span class="c1"># Eksempel 2: to reelle løsninger</span>
 <span class="n">andregradsligning</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">]</span>
 </pre></div>
@@ -13272,9 +13275,13 @@ Det eksisterer ingen reelle tall som er kvadratroten til et negativt tall. ABC-f
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">andregradsligning</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
-    <span class="c1">#-------------------------------------</span>
-    <span class="c1"># SKRIV DIN KODE HER!</span>
-    <span class="c1">#-------------------------------------</span>
+    <span class="n">indicator</span> <span class="o">=</span> <span class="n">b</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">a</span> <span class="o">*</span> <span class="n">c</span>
+    <span class="k">if</span> <span class="n">indicator</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[(</span><span class="o">-</span><span class="n">b</span> <span class="o">+</span> <span class="n">indicator</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">-</span> <span class="n">indicator</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">)]</span>
+    <span class="k">elif</span> <span class="n">indicator</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="o">-</span><span class="n">b</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">)]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
 
 <span class="c1"># Funksjonskall for å sjekke de tre foreslåtte utfallene.</span>
 <span class="c1"># Eksempel 1: ingen reelle løsninger</span>
@@ -13293,12 +13300,10 @@ Det eksisterer ingen reelle tall som er kvadratroten til et negativt tall. ABC-f
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[3], line 8</span>
-<span class="ansi-red-fg">    print(f"{andregradsligning(2, 4, 9) = }")</span>
-    ^
-<span class="ansi-red-fg">IndentationError</span><span class="ansi-red-fg">:</span> expected an indented block after function definition on line 1
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>andregradsligning(2, 4, 9) = []
+andregradsligning(2, 5, 2) = [-0.5, -2.0]
+andregradsligning(2, 4, 2) = [-1.0]
 </pre>
 </div>
 </div>
@@ -13319,12 +13324,12 @@ Det eksisterer ingen reelle tall som er kvadratroten til et negativt tall. ABC-f
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_html rendered_html output_subarea"><div class="alert alert-danger">Could not run tests, name 'andregradsligning' is not defined</div></div>
+<div class="output_html rendered_html output_subarea"><div class="alert alert-success">All tests passed. </div></div>
 </div>
 <div class="output_area">
 <div class="prompt output_prompt">Out[4]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>0.0</pre>
+<pre>5.0</pre>
 </div>
 </div>
 </div>

@@ -4,7 +4,7 @@
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Notebook</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
-  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.5.0/mermaid.esm.min.mjs';
+  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script>
 <style type="text/css">
@@ -13224,25 +13224,12 @@ div#notebook {
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sum_positive</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
-    <span class="c1">#-------------------------------------</span>
-    <span class="c1"># SKRIV DIN KODE HER!</span>
-    <span class="c1">#-------------------------------------</span>
+    <span class="n">pos_sum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">pos_sum</span> <span class="o">+=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">pos_sum</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[3], line 4</span>
-<span class="ansi-red-fg">    #-------------------------------------</span>
-                                          ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> incomplete input
-</pre>
-</div>
 </div>
 </div>
 </div>
@@ -13269,16 +13256,20 @@ div#notebook {
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[4], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">"</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span><span class="ansi-yellow-bg">sum_positive</span>([<span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">5</span>,<span style="color: rgb(188,188,188)"> </span><span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">4</span>,<span style="color: rgb(188,188,188)"> </span><span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">3</span>,<span style="color: rgb(188,188,188)"> </span><span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">2</span>,<span style="color: rgb(188,188,188)"> </span><span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">1</span>,<span style="color: rgb(188,188,188)">  </span><span style="color: rgb(98,98,98)">0</span>,<span style="color: rgb(188,188,188)">  </span><span style="color: rgb(98,98,98)">1</span>,<span style="color: rgb(188,188,188)">  </span><span style="color: rgb(98,98,98)">2</span>,<span style="color: rgb(188,188,188)">  </span><span style="color: rgb(98,98,98)">3</span>,<span style="color: rgb(188,188,188)">  </span><span style="color: rgb(98,98,98)">4</span>,<span style="color: rgb(188,188,188)">  </span><span style="color: rgb(98,98,98)">5</span>])<span style="color: rgb(188,188,188)"> </span><span class="ansi-bold" style="color: rgb(175,95,135)">= }</span><span style="color: rgb(175,0,0)">"</span>)
-<span class="ansi-green-intense-fg ansi-bold">      2</span> <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">"</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>sum_positive([<span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">8</span>,<span style="color: rgb(188,188,188)"> </span><span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">6</span>,<span style="color: rgb(188,188,188)"> </span><span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">4</span>,<span style="color: rgb(188,188,188)"> </span><span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">2</span>,<span style="color: rgb(188,188,188)">  </span><span style="color: rgb(98,98,98)">0</span>,<span style="color: rgb(188,188,188)">  </span><span style="color: rgb(98,98,98)">2</span>,<span style="color: rgb(188,188,188)">  </span><span style="color: rgb(98,98,98)">4</span>])<span style="color: rgb(188,188,188)"> </span><span class="ansi-bold" style="color: rgb(175,95,135)">= }</span><span style="color: rgb(175,0,0)">"</span>)
-<span class="ansi-green-intense-fg ansi-bold">      3</span> <span style="color: rgb(95,135,135)">### BEGIN HIDDEN TESTS</span>
-
-<span class="ansi-red-fg">NameError</span>: name 'sum_positive' is not defined</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>sum_positive([-5, -4, -3, -2, -1,  0,  1,  2,  3,  4,  5]) = 15
+sum_positive([-8, -6, -4, -2,  0,  2,  4]) = 6
+</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_html rendered_html output_subarea"><div class="alert alert-success">All tests passed. </div></div>
+</div>
+<div class="output_area">
+<div class="prompt output_prompt">Out[4]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>5.0</pre>
 </div>
 </div>
 </div>
@@ -13329,25 +13320,12 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">count_positive</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
-    <span class="c1">#-------------------------------------</span>
-    <span class="c1"># SKRIV DIN KODE HER!</span>
-    <span class="c1">#-------------------------------------</span>
+    <span class="n">pos_count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">pos_count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">pos_count</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[5], line 4</span>
-<span class="ansi-red-fg">    #-------------------------------------</span>
-                                          ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> incomplete input
-</pre>
-</div>
 </div>
 </div>
 </div>
@@ -13374,16 +13352,20 @@ Cell <span class="ansi-green-fg">In[4], line 1</span>
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[6], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">"</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span><span class="ansi-yellow-bg">count_positive</span>([<span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">5</span>,<span style="color: rgb(188,188,188)"> </span><span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">4</span>,<span style="color: rgb(188,188,188)"> </span><span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">3</span>,<span style="color: rgb(188,188,188)"> </span><span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">2</span>,<span style="color: rgb(188,188,188)"> </span><span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">1</span>,<span style="color: rgb(188,188,188)">  </span><span style="color: rgb(98,98,98)">0</span>,<span style="color: rgb(188,188,188)">  </span><span style="color: rgb(98,98,98)">1</span>,<span style="color: rgb(188,188,188)">  </span><span style="color: rgb(98,98,98)">2</span>,<span style="color: rgb(188,188,188)">  </span><span style="color: rgb(98,98,98)">3</span>,<span style="color: rgb(188,188,188)">  </span><span style="color: rgb(98,98,98)">4</span>,<span style="color: rgb(188,188,188)">  </span><span style="color: rgb(98,98,98)">5</span>])<span style="color: rgb(188,188,188)"> </span><span class="ansi-bold" style="color: rgb(175,95,135)">= }</span><span style="color: rgb(175,0,0)">"</span>)
-<span class="ansi-green-intense-fg ansi-bold">      2</span> <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">"</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>count_positive([<span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">8</span>,<span style="color: rgb(188,188,188)"> </span><span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">6</span>,<span style="color: rgb(188,188,188)"> </span><span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">4</span>,<span style="color: rgb(188,188,188)"> </span><span style="color: rgb(98,98,98)">-</span><span style="color: rgb(98,98,98)">2</span>,<span style="color: rgb(188,188,188)">  </span><span style="color: rgb(98,98,98)">0</span>,<span style="color: rgb(188,188,188)">  </span><span style="color: rgb(98,98,98)">2</span>,<span style="color: rgb(188,188,188)">  </span><span style="color: rgb(98,98,98)">4</span>])<span style="color: rgb(188,188,188)"> </span><span class="ansi-bold" style="color: rgb(175,95,135)">= }</span><span style="color: rgb(175,0,0)">"</span>)
-<span class="ansi-green-intense-fg ansi-bold">      3</span> <span style="color: rgb(95,135,135)">### BEGIN HIDDEN TESTS</span>
-
-<span class="ansi-red-fg">NameError</span>: name 'count_positive' is not defined</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>count_positive([-5, -4, -3, -2, -1,  0,  1,  2,  3,  4,  5]) = 6
+count_positive([-8, -6, -4, -2,  0,  2,  4]) = 3
+</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_html rendered_html output_subarea"><div class="alert alert-success">All tests passed. </div></div>
+</div>
+<div class="output_area">
+<div class="prompt output_prompt">Out[6]:</div>
+<div class="output_text output_subarea output_execute_result">
+<pre>5.0</pre>
 </div>
 </div>
 </div>

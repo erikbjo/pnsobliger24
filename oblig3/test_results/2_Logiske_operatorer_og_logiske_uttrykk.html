@@ -4,7 +4,7 @@
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Notebook</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
-  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.5.0/mermaid.esm.min.mjs';
+  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script>
 <style type="text/css">
@@ -13347,23 +13347,8 @@ Det fins tilfeller hvor <code>not</code> er lurt å bruke, men bruk den med måt
 <div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">mitt_svar</span> <span class="o">=</span> <span class="err">?</span> <span class="c1"># Skriv svaralternativ nr. 1, 2, 3 eller 4 her!</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">mitt_svar</span> <span class="o">=</span> <span class="mi">3</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[5], line 1</span>
-<span class="ansi-red-fg">    mitt_svar = ? # Skriv svaralternativ nr. 1, 2, 3 eller 4 her!</span>
-                ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
-</pre>
-</div>
 </div>
 </div>
 </div>
@@ -13382,12 +13367,12 @@ Det fins tilfeller hvor <code>not</code> er lurt å bruke, men bruk den med måt
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_html rendered_html output_subarea"><div class="alert alert-danger">Test 1 failed: no valid answer given.</div></div>
+<div class="output_html rendered_html output_subarea"><div class="alert alert-success">All tests passed. </div></div>
 </div>
 <div class="output_area">
 <div class="prompt output_prompt">Out[6]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>0.0</pre>
+<pre>3.0</pre>
 </div>
 </div>
 </div>
@@ -13447,7 +13432,7 @@ Du kan teste kode her:</p>
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">is_safe</span><span class="p">(</span><span class="n">trykk</span><span class="p">,</span> <span class="n">temp</span><span class="p">):</span>
     <span class="n">limit</span> <span class="o">=</span> <span class="mi">85</span> <span class="c1"># Celcius for temp, PSI for pressure</span>
-    <span class="k">if</span> <span class="n">trykk</span> <span class="ow">or</span> <span class="n">temp</span> <span class="o">&gt;=</span> <span class="n">limit</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">trykk</span> <span class="o">&gt;</span> <span class="n">limit</span> <span class="ow">or</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="n">limit</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">False</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">True</span>
@@ -13479,7 +13464,7 @@ NB! Husk å kjøre cellen der funksjonen <code>is_safe</code> er definert etter 
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>is_safe(60, 30) = False
+<pre>is_safe(60, 30) = True
 </pre>
 </div>
 </div>
@@ -13507,12 +13492,12 @@ NB! Husk å kjøre cellen der funksjonen <code>is_safe</code> er definert etter 
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_html rendered_html output_subarea"><div class="alert alert-warning">3 of 6 tests passed:<br/>Test 1 passed: test call is_safe(26, 55) completed without errors.<br/>Test 2 passed: test call is_safe(26, 55) returned a value of the correct type (bool).<br/>Test 3 failed: incorrect return value for function call 'is_safe(26, 55)': <div style="margin-left: 15px;">value is False, expected True.</div><br/>Test 4 failed: incorrect return value for function call 'is_safe(1, 72)': <div style="margin-left: 15px;">value is False, expected True.</div><br/>Test 5 failed: incorrect return value for function call 'is_safe(65, 50)': <div style="margin-left: 15px;">value is False, expected True.</div><br/>Test 6 passed: correct return value for function call 'is_safe(109, 112)': <div style="margin-left: 15px;">value {x} is correct.</div></div></div>
+<div class="output_html rendered_html output_subarea"><div class="alert alert-success">All tests passed. </div></div>
 </div>
 <div class="output_area">
 <div class="prompt output_prompt">Out[9]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>0.955</pre>
+<pre>3.0</pre>
 </div>
 </div>
 </div>
@@ -13536,7 +13521,7 @@ NB! Husk å kjøre cellen der funksjonen <code>is_safe</code> er definert etter 
 <li>Returverdi <code>2</code> om <strong>en eller begge</strong> av verdiene er <strong>større enn</strong> grenseverdi.</li>
 </ul>
 <p>Grenseverdiene er oppgitt nedenfor i tankens spesifikasjoner.</p>
-<p><img alt="No description has been provided for this image" src="../Figurer/databladTank.png" style="width: 600px; margin-left: 10%"/></p>
+<p><img alt="No description has been provided for this image" src="Figurer/databladTank.png" style="width: 600px; margin-left: 10%"/></p>
 <p>Eksempel:</p>
 <pre><code>trykk = 190, temp = 45
 return 0
@@ -13556,25 +13541,15 @@ return 2
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">tank_warning_system</span><span class="p">(</span><span class="n">trykk</span><span class="p">,</span> <span class="n">temp</span><span class="p">):</span>
-    <span class="c1">#-------------------------------------</span>
-    <span class="c1"># SKRIV DIN KODE HER!</span>
-    <span class="c1">#-------------------------------------</span>
+    <span class="n">grense_temp</span><span class="p">,</span> <span class="n">grense_trykk</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">300</span>
+    <span class="n">anbefalt_temp</span><span class="p">,</span> <span class="n">anbefalt_trykk</span> <span class="o">=</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">240</span>
+    <span class="k">if</span> <span class="n">trykk</span> <span class="o">&gt;</span> <span class="n">grense_trykk</span> <span class="ow">or</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="n">grense_temp</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">2</span>
+    <span class="k">elif</span> <span class="n">trykk</span> <span class="o">&gt;</span> <span class="n">anbefalt_trykk</span> <span class="ow">or</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="n">anbefalt_temp</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[10], line 4</span>
-<span class="ansi-red-fg">    #-------------------------------------</span>
-                                          ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> incomplete input
-</pre>
-</div>
 </div>
 </div>
 </div>
@@ -13602,16 +13577,11 @@ return 2
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[11], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">"</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span><span class="ansi-yellow-bg">tank_warning_system</span>(trykk<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">200</span>,<span style="color: rgb(188,188,188)"> </span>temp<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">50</span>)<span style="color: rgb(188,188,188)"> </span><span class="ansi-bold" style="color: rgb(175,95,135)">= }</span><span style="color: rgb(175,0,0)">"</span>) <span style="color: rgb(95,135,135)"># Forventer 0</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">"</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>tank_warning_system(trykk<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">250</span>,<span style="color: rgb(188,188,188)"> </span>temp<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">90</span>)<span style="color: rgb(188,188,188)"> </span><span class="ansi-bold" style="color: rgb(175,95,135)">= }</span><span style="color: rgb(175,0,0)">"</span>) <span style="color: rgb(95,135,135)"># Forventer 1</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">"</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>tank_warning_system(trykk<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">310</span>,<span style="color: rgb(188,188,188)"> </span>temp<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(98,98,98)">110</span>)<span style="color: rgb(188,188,188)"> </span><span class="ansi-bold" style="color: rgb(175,95,135)">= }</span><span style="color: rgb(175,0,0)">"</span>) <span style="color: rgb(95,135,135)"># Forventer 2</span>
-
-<span class="ansi-red-fg">NameError</span>: name 'tank_warning_system' is not defined</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>tank_warning_system(trykk=200, temp=50) = 0
+tank_warning_system(trykk=250, temp=90) = 1
+tank_warning_system(trykk=310, temp=110) = 2
+</pre>
 </div>
 </div>
 </div>
@@ -13631,12 +13601,12 @@ Cell <span class="ansi-green-fg">In[11], line 1</span>
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_html rendered_html output_subarea"><div class="alert alert-danger">Could not run tests, name 'tank_warning_system' is not defined</div></div>
+<div class="output_html rendered_html output_subarea"><div class="alert alert-success">All tests passed. </div></div>
 </div>
 <div class="output_area">
 <div class="prompt output_prompt">Out[12]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>0.0</pre>
+<pre>4.0</pre>
 </div>
 </div>
 </div>

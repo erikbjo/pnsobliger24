@@ -4,7 +4,7 @@
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Notebook</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
-  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.5.0/mermaid.esm.min.mjs';
+  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script>
 <style type="text/css">
@@ -13140,6 +13140,7 @@ div#notebook {
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Da anbefaler jeg paraply!"</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Ha en fin tur til universitetet!"</span><span class="p">)</span>
 
+
 <span class="n">paraply_simpel</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -13173,10 +13174,11 @@ Ha en fin tur til universitetet!
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">paraply_anbefaling</span><span class="p">(</span><span class="n">regn</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Regn i mm: </span><span class="si">{</span><span class="n">regn</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-    
+
     <span class="k">if</span> <span class="n">regn</span> <span class="o">&gt;</span> <span class="mf">0.2</span><span class="p">:</span>
         <span class="k">return</span> <span class="s2">"Ja"</span>
     <span class="k">return</span> <span class="s2">"Nei"</span>
+
 
 <span class="c1"># Vi tester funksjonen med mindre enn 0.2 mm regn meldt.</span>
 <span class="n">anbefaling</span> <span class="o">=</span> <span class="n">paraply_anbefaling</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
@@ -13233,11 +13235,12 @@ Jeg burde bruke paraply i dag: Ja
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">paraply_if</span><span class="p">(</span><span class="n">regn</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Regn i mm: </span><span class="si">{</span><span class="n">regn</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-    
+
     <span class="k">if</span> <span class="n">regn</span> <span class="o">&gt;</span> <span class="mf">0.2</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">"Da anbefaler jeg paraply!"</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">"Gjerne en paraply med NTNU-logo."</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"Ha en fin tur til universitetet!"</span><span class="p">)</span>
+
 
 <span class="n">paraply_if</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)</span>
 </pre></div>
@@ -13316,25 +13319,11 @@ Absoluttverdi vil gjøre om negative tall til positive, mens positive vil holde 
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">abs_value</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="c1">#-------------------------------------</span>
-    <span class="c1"># SKRIV DIN KODE HER!</span>
-    <span class="c1">#-------------------------------------</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">-</span><span class="n">x</span>
+    <span class="c1"># (implisert else)</span>
+    <span class="k">return</span> <span class="n">x</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[4], line 4</span>
-<span class="ansi-red-fg">    #-------------------------------------</span>
-                                          ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> incomplete input
-</pre>
-</div>
 </div>
 </div>
 </div>
@@ -13353,12 +13342,12 @@ Absoluttverdi vil gjøre om negative tall til positive, mens positive vil holde 
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_html rendered_html output_subarea"><div class="alert alert-danger">Could not run tests, name 'abs_value' is not defined</div></div>
+<div class="output_html rendered_html output_subarea"><div class="alert alert-success">All tests passed. </div></div>
 </div>
 <div class="output_area">
 <div class="prompt output_prompt">Out[5]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>0.0</pre>
+<pre>3.0</pre>
 </div>
 </div>
 </div>
@@ -13386,13 +13375,14 @@ Absoluttverdi vil gjøre om negative tall til positive, mens positive vil holde 
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">paraply_if_else</span><span class="p">(</span><span class="n">regn</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Regn i mm: </span><span class="si">{</span><span class="n">regn</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-    
+
     <span class="k">if</span> <span class="n">regn</span> <span class="o">&gt;</span> <span class="mf">0.2</span><span class="p">:</span>
         <span class="n">anbefaling</span> <span class="o">=</span> <span class="s2">"Ja"</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">anbefaling</span> <span class="o">=</span> <span class="s2">"Nei"</span>
     <span class="n">hilsen</span> <span class="o">=</span> <span class="s2">"Ha en fin tur til universitetet!"</span>
     <span class="k">return</span> <span class="n">anbefaling</span><span class="p">,</span> <span class="n">hilsen</span>
+
 
 <span class="n">anbefaling</span><span class="p">,</span> <span class="n">hilsen</span> <span class="o">=</span> <span class="n">paraply_if_else</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
 
@@ -13473,26 +13463,14 @@ $$
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+
 <span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="c1">#-------------------------------------</span>
-    <span class="c1"># SKRIV DIN KODE HER!</span>
-    <span class="c1">#-------------------------------------</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="c1"># (implisitt else)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="n">x</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[7], line 5</span>
-<span class="ansi-red-fg">    #-------------------------------------</span>
-                                          ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> incomplete input
-</pre>
-</div>
 </div>
 </div>
 </div>
@@ -13511,12 +13489,12 @@ $$
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_html rendered_html output_subarea"><div class="alert alert-danger">Could not run tests, name 'g' is not defined</div></div>
+<div class="output_html rendered_html output_subarea"><div class="alert alert-success">All tests passed. </div></div>
 </div>
 <div class="output_area">
 <div class="prompt output_prompt">Out[8]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>0.0</pre>
+<pre>4.0</pre>
 </div>
 </div>
 </div>
@@ -13546,7 +13524,7 @@ $$
 
 <span class="k">def</span> <span class="nf">paraply_if_elif_else</span><span class="p">(</span><span class="n">regn</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Regn i mm: </span><span class="si">{</span><span class="n">regn</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-    
+
     <span class="k">if</span> <span class="n">regn</span> <span class="o">&gt;</span> <span class="mf">3.0</span><span class="p">:</span>
         <span class="n">anbefaling</span> <span class="o">=</span> <span class="s2">"Støvler og regntøy"</span>
     <span class="k">elif</span> <span class="n">regn</span> <span class="o">&gt;</span> <span class="mf">0.2</span><span class="p">:</span>
@@ -13554,8 +13532,9 @@ $$
     <span class="k">else</span><span class="p">:</span>
         <span class="n">anbefaling</span> <span class="o">=</span> <span class="s2">"T-skjorte med NTNU-logo"</span>
     <span class="n">hilsen</span> <span class="o">=</span> <span class="s2">"Ha en fin tur til universitetet!"</span>
-    
+
     <span class="k">return</span> <span class="n">anbefaling</span><span class="p">,</span> <span class="n">hilsen</span>
+
 
 <span class="n">anbefaling</span><span class="p">,</span> <span class="n">hilsen</span> <span class="o">=</span> <span class="n">paraply_if_elif_else</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Dagens anbefaling: </span><span class="si">{</span><span class="n">anbefaling</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
@@ -13634,6 +13613,7 @@ Ha en fin tur til universitetet!
     <span class="n">hilsen</span> <span class="o">=</span> <span class="s2">"Ha en fin tur til universitetet!"</span>
     <span class="k">return</span> <span class="n">anbefaling</span><span class="p">,</span> <span class="n">hilsen</span>
 
+
 <span class="n">anbefaling</span><span class="p">,</span> <span class="n">hilsen</span> <span class="o">=</span> <span class="n">paraply_nested_if</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -13654,7 +13634,7 @@ Ha en fin tur til universitetet!
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># EKSEMPEL 3</span>
-<span class="k">def</span> <span class="nf">hvilken_karakter</span><span class="p">(</span><span class="n">score</span><span class="p">):</span>  
+<span class="k">def</span> <span class="nf">hvilken_karakter</span><span class="p">(</span><span class="n">score</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">89</span><span class="p">:</span>
         <span class="k">return</span> <span class="s2">"A"</span>
     <span class="k">else</span><span class="p">:</span>
@@ -13671,6 +13651,7 @@ Ha en fin tur til universitetet!
                         <span class="k">return</span> <span class="s2">"E"</span>
                     <span class="k">else</span><span class="p">:</span>
                         <span class="k">return</span> <span class="s2">"F"</span>
+
 
 <span class="n">karakter</span> <span class="o">=</span> <span class="n">hvilken_karakter</span><span class="p">(</span><span class="mi">75</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Du fikk </span><span class="si">{</span><span class="n">karakter</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
@@ -13703,7 +13684,7 @@ Ha en fin tur til universitetet!
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># EKSEMPEL 4</span>
-<span class="k">def</span> <span class="nf">hvilken_karakter</span><span class="p">(</span><span class="n">score</span><span class="p">):</span>  
+<span class="k">def</span> <span class="nf">hvilken_karakter</span><span class="p">(</span><span class="n">score</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">89</span><span class="p">:</span>
         <span class="k">return</span> <span class="s2">"A"</span>
     <span class="k">elif</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">77</span><span class="p">:</span>
@@ -13716,6 +13697,7 @@ Ha en fin tur til universitetet!
         <span class="k">return</span> <span class="s2">"E"</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="s2">"F"</span>
+
 
 <span class="n">karakter</span> <span class="o">=</span> <span class="n">hvilken_karakter</span><span class="p">(</span><span class="mi">75</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Du fikk </span><span class="si">{</span><span class="n">karakter</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
@@ -13749,7 +13731,7 @@ Ha en fin tur til universitetet!
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># EKSEMPEL 5</span>
 <span class="c1"># HER HAR VI MED VILJE HAR GJORT FEIL!</span>
-<span class="k">def</span> <span class="nf">hvilken_karakter</span><span class="p">(</span><span class="n">score</span><span class="p">):</span> 
+<span class="k">def</span> <span class="nf">hvilken_karakter</span><span class="p">(</span><span class="n">score</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="s2">"F"</span>
     <span class="k">elif</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">41</span><span class="p">:</span>
@@ -13762,6 +13744,7 @@ Ha en fin tur til universitetet!
         <span class="k">return</span> <span class="s2">"B"</span>
     <span class="k">elif</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">89</span><span class="p">:</span>
         <span class="k">return</span> <span class="s2">"A"</span>
+
 
 <span class="n">karakter</span> <span class="o">=</span> <span class="n">hvilken_karakter</span><span class="p">(</span><span class="mi">75</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Du fikk </span><span class="si">{</span><span class="n">karakter</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
@@ -13818,6 +13801,7 @@ Ha en fin tur til universitetet!
         <span class="n">karakter</span> <span class="o">=</span> <span class="s2">"F"</span>
     <span class="k">return</span> <span class="n">karakter</span>
 
+
 <span class="n">hvilken_karakter</span><span class="p">(</span><span class="mi">92</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Du fikk </span><span class="si">{</span><span class="n">karakter</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
@@ -13868,6 +13852,7 @@ Du fikk F
         <span class="n">anbefaling</span> <span class="o">+=</span> <span class="s2">"Da anbefaler jeg sko med brodder eller pigger."</span>
     <span class="k">return</span> <span class="n">anbefaling</span>
 
+
 <span class="n">anbefaling</span> <span class="o">=</span> <span class="n">paraply_og_brodder</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">anbefaling</span><span class="p">)</span>
 </pre></div>
@@ -13910,6 +13895,7 @@ Da anbefaler jeg sko med brodder eller pigger.
             <span class="k">return</span> <span class="s2">"Da anbefaler jeg paraply."</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="s2">"Anbefaler regntøy, for mye vind for paraply."</span>
+
 
 <span class="n">anbefaling</span> <span class="o">=</span> <span class="n">paraply_i_vind</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">anbefaling</span><span class="p">)</span>
@@ -13967,25 +13953,13 @@ $$</p>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="c1">#-------------------------------------</span>
-    <span class="c1"># SKRIV DIN KODE HER!</span>
-    <span class="c1">#-------------------------------------</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">10</span>
+    <span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">10</span> <span class="o">-</span> <span class="n">x</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[17], line 4</span>
-<span class="ansi-red-fg">    #-------------------------------------</span>
-                                          ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> incomplete input
-</pre>
-</div>
 </div>
 </div>
 </div>
@@ -14004,12 +13978,12 @@ $$</p>
 <div class="output">
 <div class="output_area">
 <div class="prompt"></div>
-<div class="output_html rendered_html output_subarea"><div class="alert alert-danger">Could not run tests, name 'h' is not defined</div></div>
+<div class="output_html rendered_html output_subarea"><div class="alert alert-success">All tests passed. </div></div>
 </div>
 <div class="output_area">
 <div class="prompt output_prompt">Out[18]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>0.0</pre>
+<pre>3.0</pre>
 </div>
 </div>
 </div>
